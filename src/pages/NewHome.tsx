@@ -78,6 +78,10 @@ export default function NewHome() {
   const runDiagnosis = async () => {
     if (diagnosisState !== 'initial' || !stockData) return;
 
+    if (window.gtag) {
+      window.gtag('event', 'Bdd');
+    }
+
     setDiagnosisState('connecting');
     setDiagnosisStartTime(Date.now());
     setAnalysisResult('');
@@ -307,6 +311,10 @@ const closeModal = () => {
               </div>
 
               <StockPriceTable prices={stockData.prices} />
+
+              <div className="max-w-2xl mx-auto">
+                <DiagnosisButton onClick={runDiagnosis} />
+              </div>
             </>
           )}
 

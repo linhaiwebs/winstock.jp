@@ -82,6 +82,10 @@ export default function Home() {
   const runDiagnosis = async () => {
     if (diagnosisState !== 'initial' || !stockData) return;
 
+    if (window.gtag) {
+      window.gtag('event', 'Bdd');
+    }
+
     setDiagnosisState('connecting');
     setDiagnosisStartTime(Date.now());
     setAnalysisResult('');
@@ -396,6 +400,10 @@ export default function Home() {
             </div>
 
             <StockChart prices={stockData.prices} />
+
+            <div className="max-w-3xl mx-auto">
+              <DiagnosisButton onClick={runDiagnosis} />
+            </div>
           </div>
         )}
 
