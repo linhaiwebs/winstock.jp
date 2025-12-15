@@ -8,6 +8,7 @@ import DiagnosisLoadingOverlay from '../components/DiagnosisLoadingOverlay';
 import NewDiagnosisModal from '../components/NewDiagnosisModal';
 import ApiStatsDisplay from '../components/ApiStatsDisplay';
 import ComplianceNotice from '../components/ComplianceNotice';
+import AiRobotBadge from '../components/AiRobotBadge';
 import { StockData } from '../types/stock';
 import { DiagnosisState } from '../types/diagnosis';
 import { useUrlParams } from '../hooks/useUrlParams';
@@ -287,6 +288,7 @@ const closeModal = () => {
       <div className="relative min-h-screen flex flex-col">
         <Header />
         <ApiStatsDisplay />
+        <AiRobotBadge />
 
         <div className="relative z-10 max-w-[1400px] mx-full px-6 sm:px-8 lg:px-12 py-8 space-y-8 flex-1">
           {error && diagnosisState !== 'error' && (
@@ -319,6 +321,10 @@ const closeModal = () => {
                     多面的なデータから本質を見抜く、マルチモーダルAI分析
                   </p>
                 </div>
+              </div>
+
+              <div className="max-w-2xl mx-auto">
+                <DiagnosisButton onClick={runDiagnosis} />
               </div>
 
               <StockPriceTable prices={stockData.prices} />

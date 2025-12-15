@@ -9,6 +9,7 @@ import DiagnosisModal from '../components/DiagnosisModal';
 import AdSenseBlock from '../components/AdSenseBlock';
 import ApiStatsDisplay from '../components/ApiStatsDisplay';
 import AiBrainGraphic from '../components/AiBrainGraphic';
+import AiRobotBadge from '../components/AiRobotBadge';
 import { StockData } from '../types/stock';
 import { DiagnosisState } from '../types/diagnosis';
 import { useUrlParams } from '../hooks/useUrlParams';
@@ -333,6 +334,7 @@ export default function Home() {
     <div className="min-h-screen bg-dark-primary">
       <ComplianceNotice />
       <ApiStatsDisplay />
+      <AiRobotBadge />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         {/* Hero Section with Brain Graphic */}
@@ -408,6 +410,10 @@ export default function Home() {
                   多面的なデータから本質を見抜く、マルチモーダルAI分析
                 </p>
               </div>
+            </div>
+
+            <div className="max-w-3xl mx-auto">
+              <DiagnosisButton onClick={runDiagnosis} />
             </div>
 
             <StockChart prices={stockData.prices} />
