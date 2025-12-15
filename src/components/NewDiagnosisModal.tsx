@@ -59,7 +59,7 @@ export default function NewDiagnosisModal({
               <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
             </div>
             <div>
-              <h2 className="text-sm sm:text-lg md:text-xl font-bold text-white">AI診断完了</h2>
+              <h2 className="text-sm sm:text-lg md:text-xl font-bold text-white">AIが読み解く市場シグナル（参考情報）</h2>
               <p className="text-[10px] sm:text-xs text-blue-100 hidden sm:block">モメンタム分析・リアルタイムデータ・AIロジック</p>
             </div>
           </div>
@@ -133,10 +133,17 @@ export default function NewDiagnosisModal({
           </div>
 
           <div className="bg-yellow-900/20 border border-yellow-600/30 rounded-lg p-2.5 sm:p-3">
-            <p className="text-[10px] sm:text-xs text-yellow-300/80 leading-relaxed">
-              <strong className="font-semibold">免責事項：</strong>
-              本サービスは金融商品の取引を勧誘するものではなく、情報提供のみを目的としています。診断結果は投資助言ではありません。株式投資には価格変動リスク、信用リスクなどが伴い、損失を被る可能性があります。最終的な投資判断はご自身の責任において行ってください。
-            </p>
+            <h4 className="text-xs sm:text-sm font-bold text-yellow-300 mb-2">重要なお知らせ</h4>
+            <ul className="text-[10px] sm:text-xs text-yellow-300/80 leading-relaxed space-y-1">
+              <li className="flex items-start">
+                <span className="mr-1.5">•</span>
+                <span>当サービスは情報提供サービスであり、投資助言・勧誘ではありません。</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-1.5">•</span>
+                <span>いかなる投資判断も、利用者ご自身の責任で行ってください。</span>
+              </li>
+            </ul>
           </div>
         </div>
 

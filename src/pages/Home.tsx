@@ -399,6 +399,17 @@ export default function Home() {
               <DiagnosisButton onClick={runDiagnosis} />
             </div>
 
+            <div className="max-w-4xl mx-auto my-8 md:my-12">
+              <div className="bg-gradient-to-r from-blue-900/40 via-cyan-900/40 to-blue-900/40 border border-cyan-500/30 rounded-2xl p-6 md:p-8 text-center shadow-lg backdrop-blur-sm">
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                  複雑なデータも即座に理解。次の一手をAIが示します
+                </h3>
+                <p className="text-base md:text-lg text-cyan-200/80 font-medium">
+                  多面的なデータから本質を見抜く、マルチモーダルAI分析
+                </p>
+              </div>
+            </div>
+
             <StockChart prices={stockData.prices} />
 
             <div className="max-w-3xl mx-auto">

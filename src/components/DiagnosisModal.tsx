@@ -71,7 +71,7 @@ export default function DiagnosisModal({
       <div className="relative w-full max-w-3xl max-h-[90vh] bg-dark-secondary rounded-lg shadow-red-glow-lg overflow-hidden border-2 border-accent-red/30" style={{ touchAction: 'auto' }}>
         <div className="sticky top-0 bg-gradient-to-r from-accent-red to-accent-red-dark px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <h2 className="text-2xl font-bold text-white">AI診断結果（無料）</h2>
+            <h2 className="text-2xl font-bold text-white">AIが読み解く市場シグナル（参考情報）</h2>
             {isConnecting && (
               <div className="flex items-center gap-2 text-white text-sm">
                 <Loader2 className="w-4 h-4 animate-spin" />
@@ -142,7 +142,7 @@ export default function DiagnosisModal({
               className="w-full bg-gradient-to-r from-green-600 to-green-700 text-white font-bold py-4 px-6 rounded-lg hover:from-green-700 hover:to-green-800 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-3 text-lg mt-6"
             >
               <ExternalLink className="w-6 h-6" />
-              無料AI診断結果をLINEで毎日受け取る
+              LINEで詳細な診断レポートを受け取る
             </button>
 
             <div className="mt-3 p-3 bg-gradient-to-r from-green-900/30 to-emerald-900/30 rounded-lg border border-green-600/30">
@@ -153,10 +153,17 @@ export default function DiagnosisModal({
           </div>
 
           <div className="mt-6 p-4 bg-dark-card border-l-4 border-yellow-500 rounded-lg">
-            <p className="text-sm font-semibold text-yellow-400 leading-relaxed">
-              <strong>免責事項：</strong>
-              本サービスは金融商品の取引を勧誘するものではなく、情報提供のみを目的としています。診断結果は投資助言ではありません。株式投資には価格変動リスク、信用リスクなどが伴い、損失を被る可能性があります。最終的な投資判断はご自身の責任において行ってください。
-            </p>
+            <h4 className="text-base font-bold text-yellow-400 mb-3">重要なお知らせ</h4>
+            <ul className="text-sm text-yellow-300 leading-relaxed space-y-2">
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>当サービスは情報提供サービスであり、投資助言・勧誘ではありません。</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>いかなる投資判断も、利用者ご自身の責任で行ってください。</span>
+              </li>
+            </ul>
           </div>
         </div>
 

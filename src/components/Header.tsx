@@ -15,10 +15,10 @@ export default function Header() {
 
             <div>
               <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-300 via-cyan-300 to-blue-300 bg-clip-text text-transparent drop-shadow-lg">
-                AI株式診断
+                AIによる深層分析
               </h1>
               <p className="text-xs text-blue-300/70 mt-1 font-medium tracking-wide">
-                最先端のAI技術で分析
+                インテリジェントな分析が意思決定を強化
               </p>
             </div>
           </div>
